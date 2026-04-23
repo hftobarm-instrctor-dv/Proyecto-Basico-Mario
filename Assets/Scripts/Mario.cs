@@ -24,16 +24,27 @@ public class Mario : MonoBehaviour
     // Este método se ejecuta una vez cada cuadro (una vez cada 60vo de segundo)
     private void Update()
     {
+        // El personaje no se mueve, no rota, no hace nada
         animator.SetBool("Caminando", false);
+        
+        // El personaje se mueve hacia adelante
+
+        //si la tecla de flecha hacia arriba está siendo presionada, entonces haz algo
         if(Input.GetKey(KeyCode.UpArrow))
         {
+            // el controlador del personaje se mueve hacia adelante, multiplicado por el tiempo que tarda cada cuadro en ejecutarse, multiplicado por la velocidad
+
             controller.Move(transform.forward * Time.deltaTime * velocidad);
+            // establezca el animador en caminando...
             animator.SetBool("Caminando", true);
         }
         
+        //si la tecla de flecha hacia la derecha está siendo presionada, entonces haz algo
         if(Input.GetKey(KeyCode.RightArrow))
         {
+
             Debug.Log("Rotating");
+            //rote el personaje alrededor del eje vertical (arriba) multiplicado por la rotación multiplicada por el tiempo que tarda cada cuadro en ejecutarse
             transform.Rotate(transform.up, rotacion * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.LeftArrow))
