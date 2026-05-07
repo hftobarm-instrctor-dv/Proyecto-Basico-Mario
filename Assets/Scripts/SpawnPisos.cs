@@ -6,6 +6,7 @@ public class SpawnPisos : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject piso;
+    public GameObject pisoConCactus;
     void Start()
     {
         StartCoroutine(InstanciarPiso());
@@ -23,12 +24,26 @@ public class SpawnPisos : MonoBehaviour
         //Para Siempre...
         while (true)
         {
-            //Instanciar el piso: crea una copia del prefab `piso` y la convierte en hijo
-            //del Transform del GameObject que contiene este script (this.transform).
-            //Atención: la posición y rotación resultante dependerán del prefab y de
-            //cómo Unity maneja la sobrecar|ga usada. Si necesitas control absoluto de la
-            //posición mundial, usa la sobrecarga con posición y rotación.
-            Instantiate(piso, this.transform.position, this.transform.rotation);
+            /*
+             * Generar un numero aleatorio entre 0 y 100
+             * Si el número es menor o igual que 30
+             * Entonces instanciar pisoconCactus
+             * sino instanciar piso 
+             */
+
+            // Genera un entero entre 0 y 100 (incluyendo 100)
+            int valor = Random.Range(0, 101);
+
+            if (valor <= 30)
+            {
+                // Instanciar piso con cactus
+                Instantiate(pisoConCactus, this.transform.position, this.transform.rotation);
+            }
+            else
+            {
+                // Instanciar piso normal
+                Instantiate(piso, this.transform.position, this.transform.rotation);
+            }
 
             // Espera 1 segundo antes de continuar la ejecución de la coroutine.
             // `yield return new WaitForSeconds(1);` cede el control a Unity y
