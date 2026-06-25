@@ -16,7 +16,8 @@ public class Mario : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
-        audioSource = GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();       
+    
 
 
     }
