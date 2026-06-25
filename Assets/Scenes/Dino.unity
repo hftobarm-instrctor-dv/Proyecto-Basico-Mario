@@ -152,7 +152,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1061118904}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -41.154}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -51.534}
 --- !u!65 &59185636
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -413,7 +413,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1061118904}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -118.948}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -103.788}
 --- !u!65 &511047606
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -604,6 +604,55 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 728028670}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &771497052
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 771497054}
+  - component: {fileID: 771497053}
+  m_Layer: 0
+  m_Name: DINO
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &771497053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 771497052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa1b69e52f86d1a498821afce865f088, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Dino
+  estaSaltando: 0
+  AlturaMin: 0.2
+  gravedad: -9.8
+  velocidadSalto: 5
+--- !u!4 &771497054
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 771497052}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.51, y: 0.2, z: -0.02}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1061118904}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &864053607
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -675,7 +724,7 @@ GameObject:
   - component: {fileID: 1061118901}
   - component: {fileID: 1061118900}
   m_Layer: 0
-  m_Name: DINO
+  m_Name: DINO Grafico
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -791,8 +840,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1061118899}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.51, y: 0.2, z: -0.02}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -802,7 +851,7 @@ Transform:
   - {fileID: 59185635}
   - {fileID: 511047605}
   - {fileID: 728028671}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 771497054}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1197588698
 GameObject:
@@ -1657,5 +1706,5 @@ SceneRoots:
   - {fileID: 1261052476}
   - {fileID: 1718882722}
   - {fileID: 1735454258}
-  - {fileID: 1061118904}
+  - {fileID: 771497054}
   - {fileID: 1972983112}
